@@ -1,7 +1,4 @@
-const str = "hello everyone, it's me, Mario"
+let fruits = ['apple', 'banana', 'orange']
+let x = [...new Set(fruits)]
 
-
-
-console.log(str.split('e'))
-console.log(str.split(''))
-console.log(str.split(' '))
+console.log(x)
