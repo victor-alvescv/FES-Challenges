@@ -1,4 +1,7 @@
-let fruits = ['apple', 'banana', 'orange']
-let x = [...new Set(fruits)]
+const arr = [1, -1, 2, 3];
 
-console.log(x)
+const newArr = arr.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue
+}, arr.length)
+
+console.log(newArr)

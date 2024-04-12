@@ -14,7 +14,13 @@
 // a = 'ivaD', c = 'd' => a = 'd' + 'ivaD' = 'divaD'
 
 const reverseString = (str) => {
-  return str.split('').reduce((accumulator, currentValue) => currentValue + accumulator)
+  let reversed = ""
+
+  for (char of str) {
+    reversed = char + reversed
+  }
+
+  return reversed
 };
 
 module.exports = reverseString;

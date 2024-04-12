@@ -20,33 +20,22 @@ const reverseString = (str) => {
     .reduce((accumulator, currentValue) => currentValue + accumulator);
 };
 
-// SECOND SOLUTION (easiest)
-// const reverseString = (str) => {
-//   return str.split('').reverse().join('');
-// };
+// FIRST MADE SOLUTION
+const reverseString2 = (str) => {
+  let reversed = "";
 
-// FIRST SOLUTION (bruteforce)
-// const reverseString = (str) => {
-//   let reversed = '';
+  for (let char of str) {
+    reversed = char + reversed;
+  }
 
-//   for (let char of str) {
-//     reversed = char + reversed;
-//   }
+  return reversed;
+};
 
-//   return reversed;
-// };
+// SECOND MADE SOLUTION
+const reverseString3 = (str) => {
+  return str.split('').reverse().join('')
+};
 
-// PLAYGROUND
-// const arr = [1, -1, 2, 3];
-// a = 0, c = 1 => a = 1
-// a = 1, c = -1 => a = 0
-// a = 0, c = 2 => a = 2
-// a = 2, c = 3 => a = 5
 
-// a = 1, c = -1 => a = 0
-// a = 0, c = 2 => a = 2
-// a = 2, c = 3 => a = 5
-// const sum = arr.reduce((accumulator, current) => accumulator + current);
-// console.log(sum);
 
-module.exports = reverseString;
+module.exports = reverseString; //Check the other functions with the solutions here, changing the function to check name!;

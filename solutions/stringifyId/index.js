@@ -81,4 +81,4 @@ const stringifyId4 = (arr) => {
   return uniqueArray.join(", ");
 };
 
-module.exports = stringifyId;
+module.exports = stringifyId; //Check the other functions with the solutions here, changing the function to check name!;
