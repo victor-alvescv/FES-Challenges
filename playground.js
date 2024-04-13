@@ -1,7 +1,3 @@
-const arr = [1, -1, 2, 3];
+const str = 'david is cool'
 
-const newArr = arr.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue
-}, arr.length)
-
-console.log(newArr)
+console.log(Math.floor(str.length / 2))

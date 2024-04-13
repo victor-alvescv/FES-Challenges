@@ -13,14 +13,14 @@
 // a = 'vaD', c = 'i' => a = 'i' + 'vaD' = 'ivaD'
 // a = 'ivaD', c = 'd' => a = 'd' + 'ivaD' = 'divaD'
 
-// FINAL SOLUTION (most impressive)
+// FINAL SOLUTION (most impressive) -> Using the reduce() method!;
 const reverseString = (str) => {
   return str
     .split("")
     .reduce((accumulator, currentValue) => currentValue + accumulator);
 };
 
-// FIRST MADE SOLUTION
+// FIRST MADE SOLUTION ->  Using a for loop to loop through all the letters of the string, creating another string reversed!;
 const reverseString2 = (str) => {
   let reversed = "";
 
@@ -31,7 +31,7 @@ const reverseString2 = (str) => {
   return reversed;
 };
 
-// SECOND MADE SOLUTION
+// SECOND MADE SOLUTION -> Using JS functions to turn it into an array, reverse it and turn it back to a string;
 const reverseString3 = (str) => {
   return str.split('').reverse().join('')
 };
