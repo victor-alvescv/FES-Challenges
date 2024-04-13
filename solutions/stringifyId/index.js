@@ -16,7 +16,10 @@
  * ]) === 'ABC, abc, CBA'
  */
 
-// TOP TECH SOLUTION
+/* TOP TECH SOLUTION -> Using the new Set method, where we turn the array of objects, into a new array with map() made only by id's. 
+We use the new Set() method, with the spread operator with the set to spread all the items inside the object and to turn the object 
+given by the set into an array of unique values, joining the uniqueArray, we have our final answer as a string, an string divided by commas with unique values(ID's) coming from the initial arr...;
+*/
 const stringifyId = (arr) => {
   const idArray = arr.map((obj) => obj.id);
 
@@ -25,7 +28,7 @@ const stringifyId = (arr) => {
   return uniqueIdArray.join(", ");
 };
 
-// BRUTE FORCE SOLUTION 1
+// BRUTE FORCE SOLUTION 1 -> Using another for loop for the words of uniqueArray to create a new string without the ', ' at the end;
 const stringifyId2 = (arr) => {
   const idArray = arr.map((obj) => obj.id);
   const uniqueArray = [];
@@ -48,7 +51,7 @@ const stringifyId2 = (arr) => {
   return idString;
 };
 
-// BRUTE FORCE SOLUTION 2
+// BRUTE FORCE SOLUTION 2 -> Using the same idea as the one above but instead of taking out the ', ' from the end, just add to every word and at the return slice out the last 2 characters;
 const stringifyId3 = (arr) => {
   const idArray = arr.map((obj) => obj.id);
   const uniqueArray = [];
@@ -67,7 +70,7 @@ const stringifyId3 = (arr) => {
   return idString.slice(0, idString.length - 2);
 };
 
-// BRUTE FORCE SOLUTION 3
+// BRUTE FORCE SOLUTION 3 -> Using join(', ') to make things easer where we don't need idString, or other for loop, the join method is not putting the ', ' in the end;
 const stringifyId4 = (arr) => {
   const idArray = arr.map((obj) => obj.id);
   const uniqueArray = [];
