@@ -1,3 +1,6 @@
-const str = 'david is cool'
+const charMap = new Map([
+    ['duwau', 'hduiaew'],
+    ['dohawu', 'daowji']
+]);
 
-console.log(Math.floor(str.length / 2))
+console.log(charMap.size)

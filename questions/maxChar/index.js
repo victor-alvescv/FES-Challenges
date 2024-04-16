@@ -12,14 +12,14 @@ const maxCharacter = (str) => {
   let max = 0;
   let maxChar = "";
 
-  for (let char of str) {
+  for (const char of str) {
     charMap.set(char, charMap.get(char) + 1 || 1);
   }
 
-  for (let [key, value] of charMap) {
-    if (value > max) {
-      max = value;
-      maxChar = key;
+  for (const [char, count] of charMap) {
+    if (count > max) {
+      max = count;
+      maxChar = char;
     }
   }
 
@@ -27,17 +27,3 @@ const maxCharacter = (str) => {
 };
 
 module.exports = maxCharacter;
-
-/* 
-
-[s -> 1]
-[i -> 3]
-[m -> 1]
-[p -> 1]
-[l -> 1]
-[f -> 1]
-[e -> 1]
-[d -> 1]
-
-
-*/
