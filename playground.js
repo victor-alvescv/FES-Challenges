@@ -1,6 +1,7 @@
-const charMap = new Map([
-    ['duwau', 'hduiaew'],
-    ['dohawu', 'daowji']
-]);
+const strA = 'aaaaaBBBBcccc';
+const strB = 'bbbbbAAAAAccccccCCC';
 
-console.log(charMap.size)
+const sortA = strA.split("").sort().join("").toLowerCase().replaceAll(' ', '');
+const sortB = strB.split("").sort().join("").toLowerCase().replaceAll(' ', '');
+
+console.log([sortA, sortB])

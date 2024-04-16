@@ -10,7 +10,11 @@
  */
 
 const anagrams = (strA, strB) => {
-  
-}
+  return sortString(strA) === sortString(strB);
+};
+
+const sortString = (str) => {
+  return str.toLowerCase().split("").sort().join("").replaceAll(" ", "");
+};
 
 module.exports = anagrams;
