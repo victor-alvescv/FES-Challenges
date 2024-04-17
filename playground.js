@@ -1,7 +1,10 @@
-const strA = 'aaaaaBBBBcccc';
-const strB = 'bbbbbAAAAAccccccCCC';
 
-const sortA = strA.split("").sort().join("").toLowerCase().replaceAll(' ', '');
-const sortB = strB.split("").sort().join("").toLowerCase().replaceAll(' ', '');
+const str = 'coding is awesome'
+const result = [];
 
-console.log([sortA, sortB])
+  for (let word of str.split(" ")) {
+    const capitalizeWord = word[0].toUpperCase() + word.slice(1);
+    result.push(capitalizeWord);
+  }
+
+console.log(result)
